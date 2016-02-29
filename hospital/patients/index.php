@@ -20,10 +20,10 @@
 ?>
 			<tr>
 				<td><?=$patient['patient_name']?></td>
-				<td><?=$patient['spieces_species']?></td>
+				<td><?=$patient['spieces_spieces']?></td>
 				<td><?=$patient['patient_status']?></td>
-				<td class="center"><a href="edit.php?id=<?=$patient['id']?>">edit</a></td>
-				<td class="center"><a href="delete.php?id=<?=$patient['id']?>">delete</a></td>
+				<td class="center"><a href="edit.php?id=<?=$patient['patient_id']?>">edit</a></td>
+				<td class="center"><a href="delete.php?id=<?=$patient['patient_id']?>">delete</a></td>
 			</tr>
 
 <?php
