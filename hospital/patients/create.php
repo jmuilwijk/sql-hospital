@@ -1,5 +1,5 @@
 <?php
-	require_once "create.logic.php";
+	require_once "create.logic.php";	
 	include "../common/header.php";
 ?>
 	<h1>New patiënt</h1>
@@ -10,10 +10,10 @@
 		</div>
 		<div>
 			<label for="name">Species:</label>
-			<input type="text" id="species" name="species">
+			<input type="number" id="species" name="species">
 		</div>
 		<div>
-			<label for="name">Species:</label>
+			<label for="name">Status:</label>
 			<textarea id="status" name="status"></textarea>
 		</div>
 		<div>

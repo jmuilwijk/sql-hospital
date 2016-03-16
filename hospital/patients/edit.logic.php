@@ -6,10 +6,16 @@
 			$db = new mysqli('localhost','root','','hospital');
 			$id = $db->escape_string($_GET["id"]);
 			
-			$query = "select * from patient where id=$id";
+			$query = "SELECT patient.id AS patient_id, patient.name AS patient_name, spieces.spieces AS spieces_spieces,
+			 patient.status AS patient_status FROM patient INNER JOIN spieces ON patient.spieces=spieces.id WHERE 
+			 patient.id=$id";
+			
 			$result = $db->query($query);
-		
-			$patient = $result->fetch_assoc();		
+			
+
+			$patient = $result->fetch_assoc();	
+			var_dump($patient);
+	
 		endif;
 		if ($patient == NULL):
 			// No patient found
@@ -19,19 +25,23 @@
 		endif;
 	elseif ($_SERVER["REQUEST_METHOD"] == "POST"):
 		$db = new mysqli('localhost','root','','hospital');
-		
+
 		// Prepare data for update
-		$id = $db->escape_string($_POST["id"]);
-		$name = $db->escape_string($_POST["name"]);
-		$species = $db->escape_string($_POST["species"]);
-		$status = $db->escape_string($_POST["status"]);
-		
+		$id = $db -> escape_string($_POST['patient_id']);
+		$name = $db -> escape_string($_POST['patient_name']);
+		$status = $db -> escape_string($_POST['patient_status']);
+		var_dump($id);
+		var_dump($name);
+		var_dump($status);
+
 		// Prepare query and execute
-		$query = "update patient set name='$name', species='$species', status='$status' where id=$id";
+		$query = "UPDATE patient SET name='$name', status='$status' WHERE id=$id";
 		$result = $db->query($query);
+		var_dump($result);
+
 	
     // Tell the browser to go back to the index page.
-    header("Location: ./");
+   // header("Location: ./");
     exit();
 	endif;
 
