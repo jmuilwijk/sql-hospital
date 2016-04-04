@@ -5,17 +5,17 @@
 	<h1>Edit patiënt</h1>
 	<form method="post">
 		<div>
-			<input type="hidden" name="id" value="<?=$patient['patient_id']?>">
+			<input type="hidden" name="patient_id" value="<?=$patient['patient_id']?>">
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" value="<?=$patient['patient_name']?>">
+			<input type="text" id="name" name="patient_name" value="<?=$patient['patient_name']?>">
 		</div>
 		<div>
 			<label for="name">Species:</label>
-			<input type="text" id="species" name="species" value="<?=$patient['spieces_spieces']?>">
+			<input type="text" id="species" name="patient_spieces" value="<?=$patient['spieces_spieces']?>">
 		</div>
 		<div>
-			<label for="name">Species:</label>
-			<textarea id="status" name="status"><?=$patient['patient_status']?></textarea>
+			<label for="name">Status:</label>
+			<textarea id="status" name="patient_status"><?=$patient['patient_status']?></textarea>
 		</div>
 		<div>
 			<label></label>

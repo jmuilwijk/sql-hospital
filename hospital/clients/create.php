@@ -9,14 +9,6 @@
 			<input type="text" id="name" name="name">
 		</div>
 		<div>
-			<label for="name">Species:</label>
-			<input type="number" id="species" name="spieces">
-		</div>
-		<div>
-			<label for="name">Status:</label>
-			<textarea id="status" name="status"></textarea>
-		</div>
-		<div>
 			<label></label>
 			<input type="submit" value="Save">
 		</div>

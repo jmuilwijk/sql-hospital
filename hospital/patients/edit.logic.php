@@ -30,18 +30,15 @@
 		$id = $db -> escape_string($_POST['patient_id']);
 		$name = $db -> escape_string($_POST['patient_name']);
 		$status = $db -> escape_string($_POST['patient_status']);
-		var_dump($id);
-		var_dump($name);
-		var_dump($status);
+		$spieces = $db -> escape_string($_POST['patient_spieces']);
 
 		// Prepare query and execute
-		$query = "UPDATE patient SET name='$name', status='$status' WHERE id=$id";
+		$query = "UPDATE patient SET name='$name', status='$status', spieces='$spieces' WHERE id=$id";
 		$result = $db->query($query);
-		var_dump($result);
 
 	
-    // Tell the browser to go back to the index page.
-   // header("Location: ./");
+    //Tell the browser to go back to the index page.
+   header("Location: ./");
     exit();
 	endif;
 
