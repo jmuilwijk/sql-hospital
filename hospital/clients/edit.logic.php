@@ -12,7 +12,6 @@
 			
 
 			$client = $result->fetch_assoc();	
-			var_dump($client);
 	
 		endif;
 		if ($client == NULL):
@@ -29,9 +28,9 @@
 		$name = $db -> escape_string($_POST['name']);
 
 		// Prepare query and execute
-		$query = "UPDATE clients SET name='$name', WHERE id=$id";
+		$query = "UPDATE clients SET name='$name' WHERE id=$id";
 		$result = $db->query($query);
-		var_dump($query);
+
 
 	
     //Tell the browser to go back to the index page.

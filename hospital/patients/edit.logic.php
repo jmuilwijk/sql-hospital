@@ -14,7 +14,6 @@
 			
 
 			$patient = $result->fetch_assoc();	
-			var_dump($patient);
 	
 		endif;
 		if ($patient == NULL):
