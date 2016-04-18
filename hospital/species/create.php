@@ -2,11 +2,11 @@
 	require_once "create.logic.php";	
 	include "../common/header.php";
 ?>
-	<h1>New spieces</h1>
+	<h1>New species</h1>
 	<form method="post">
 		<div>
-			<label for="spieces">Spieces:</label>
-			<input type="text" id="spieces" name="spieces">
+			<label for="species">species:</label>
+			<input type="text" id="species" name="species">
 		</div>
 		<div>
 			<label></label>

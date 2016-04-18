@@ -11,8 +11,8 @@
 			<span><?=$patient['name']?></span>
 		</div>
 		<div>
-			<label for="spieces">Species:</label>
-			<span><?=$patient['spieces']?></span>
+			<label for="species">Species:</label>
+			<span><?=$patient['species_id']?></span>
 		</div>
 		<div>
 			<label for="status">status:</label>

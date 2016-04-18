@@ -5,18 +5,25 @@
 	<h1>Edit patiënt</h1>
 	<form method="post">
 		<div>
-			<input type="hidden" name="patient_id" value="<?=$patient['patient_id']?>">
+			<input type="hidden" name="id" value="<?=$patient['id']?>">
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="patient_name" value="<?=$patient['patient_name']?>">
+			<input type="text" id="name" name="name" value="<?=$patient['name']?>">
 		</div>
 		<div>
 			<label for="name">Species:</label>
-			<input type="text" id="species" name="patient_spieces" value="<?=$patient['spieces_spieces']?>">
+			<input type="text" id="species" name="species" value="<?=$patient['species']?>">
 		</div>
 		<div>
 			<label for="name">Status:</label>
-			<textarea id="status" name="patient_status"><?=$patient['patient_status']?></textarea>
+			<textarea id="status" name="status"><?=$patient['status']?></textarea>
 		</div>
+		</div>
+			<label for="name">Gender:</label><br>
+			<label for="name">Male:</label>
+			<input type="radio" name="gender" value="male" checked><br>
+			<label for="name">Female:</label>
+			<input type="radio" name="gender" value="female"><br>
+		<div>
 		<div>
 			<label></label>
 			<input type="submit" value="Save">

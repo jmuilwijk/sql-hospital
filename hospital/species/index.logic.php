@@ -1,8 +1,8 @@
 <?php
 	$db = new mysqli('localhost','root','','hospital');
 
-	$query = "SELECT * FROM spieces";
+	$query = "SELECT * FROM species";
 	$result = $db->query($query);
 	
-	$spieces = $result->fetch_all(MYSQLI_ASSOC);
+	$species = $result->fetch_all(MYSQLI_ASSOC);
 ?>

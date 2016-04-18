@@ -3,10 +3,10 @@
 		$db = new mysqli('localhost','root','','hospital');
 		
 		// Prepare data for insertion
-		$spieces = $db->escape_string($_POST["spieces"]);
+		$species = $db->escape_string($_POST["species"]);
 		
 		// Prepare query and execute
-		$query ="INSERT INTO spieces (spieces) VALUES ('$spieces')";
+		$query ="INSERT INTO species (species) VALUES ('$species')";
 		$result = $db->query($query);
 	
     // Tell the browser to go back to the index page.

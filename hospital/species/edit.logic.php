@@ -1,21 +1,21 @@
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "GET"):
-		$spieces = NULL;
+		$species = NULL;
 		if (isset($_GET['id'])):
-			// Get spieces for id
+			// Get species for id
 			$db = new mysqli('localhost','root','','hospital');
 			$id = $db->escape_string($_GET["id"]);
 			
-			$query = "SELECT * FROM spieces WHERE id='$id'";
+			$query = "SELECT * FROM species WHERE id='$id'";
 			
 			$result = $db->query($query);
 			
 
-			$spieces = $result->fetch_assoc();	
+			$species = $result->fetch_assoc();	
 	
 		endif;
-		if ($spieces == NULL):
-			// No spieces found
+		if ($species == NULL):
+			// No species found
 			http_response_code(404);
 			include("../common/not_found.php");
 			exit();
@@ -25,10 +25,10 @@
 
 		// Prepare data for update
 		$id = $db -> escape_string($_POST['id']);
-		$spieces = $db -> escape_string($_POST['spieces']);
+		$species = $db -> escape_string($_POST['species']);
 
 		// Prepare query and execute
-		$query = "UPDATE spieces SET spieces='$spieces' WHERE id=$id";
+		$query = "UPDATE species SET species='$species' WHERE id=$id";
 		$result = $db->query($query);
 	
     //Tell the browser to go back to the index page.
