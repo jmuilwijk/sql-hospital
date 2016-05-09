@@ -43,7 +43,6 @@
 			<label></label>
 			<input type="submit" value="Save">
 		</div>
-		<?php var_dump($clients['id'])?>
 	</form>
 <?php
 	include "../common/footer.php";

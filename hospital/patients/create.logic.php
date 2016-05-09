@@ -24,7 +24,7 @@
 		$species = $speciesResult->fetch_all(MYSQLI_ASSOC);
 
 		$clientQuery ="SELECT * FROM clients";
-		$clientResult = $db->query($speciesQuery);
+		$clientResult = $db->query($clientQuery);
 		$clients = $clientResult->fetch_all(MYSQLI_ASSOC);
 	
     // Tell the browser to go back to the index page.
